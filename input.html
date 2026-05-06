@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>📊 Customer Segmentation</h2>
+
+<form action="/add" method="post">
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="number" name="income" placeholder="Income" required>
+    <input type="number" name="spending" placeholder="Spending Score" required>
+
+    <br>
+    <button type="submit">Add Customer</button>
+</form>
+
+<!-- TABLE -->
+{% if data %}
+<table>
+    <tr>
+        <th>Age</th>
+        <th>Income</th>
+        <th>Spending</th>
+        <th>Action</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{row.Age}}</td>
+        <td>{{row.Income}}</td>
+        <td>{{row.Spending}}</td>
+        <td>
+            <a href="/delete/{{loop.index0}}" class="delete-btn">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+<br>
+
+<a href="/run" class="btn">Run Clustering</a>
+<a href="/reset" class="btn clear-btn">Clear All</a>
+
+<!-- ✅ BACK BUTTON ADDED -->
+<br><br>
+<a href="/dashboard" class="btn back-btn">⬅ Back</a>
+
+</div>
+
+</body>
+</html>

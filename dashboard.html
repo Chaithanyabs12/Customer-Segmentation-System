@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dash-body">
+
+<div class="dash-container">
+
+    <div class="dash-box">
+        <h1>📊 Customer Segmentation</h1>
+
+        <div class="dash-btns">
+            <a href="/input" class="dash-btn1">Add Customer Data</a>
+            <a href="/run" class="dash-btn2">Run Clustering</a>
+            <a href="/load_dataset" class="dash-btn dash-blue">Load Dataset</a>
+        </div>
+
+        <a href="/logout" class="dash-btn3">Logout</a>
+    </div>
+
+</div>
+
+</body>
+</html>

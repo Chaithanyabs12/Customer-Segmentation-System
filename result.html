@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>📊 Customer Clusters</h2>
+
+<p>Customers grouped based on Income & Spending</p>
+
+<!-- ================= SCATTER GRAPH ================= -->
+<img src="data:image/png;base64,{{plot_url}}" width="500">
+
+<br><br>
+
+<!-- ================= PIE CHART ================= -->
+<img src="data:image/png;base64,{{pie_url}}" width="350">
+
+<br><br>
+
+<!-- ================= SUMMARY ================= -->
+<h3>📈 Summary</h3>
+<p>Total Customers: <b>{{total}}</b></p>
+<p>Average Income: <b>{{avg_income}}</b></p>
+<p>Average Spending: <b>{{avg_spending}}</b></p>
+
+<br>
+
+<!-- ================= TABLE ================= -->
+<table>
+    <tr>
+        <th>Income</th>
+        <th>Spending</th>
+        <th>Cluster</th>
+        <th>Type</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{row.Income}}</td>
+        <td>{{row.Spending}}</td>
+        <td>{{row.Cluster}}</td>
+        <td>{{row.Label}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="/input" class="btn">⬅ Add More</a>
+
+</div>
+
+</body>
+</html>

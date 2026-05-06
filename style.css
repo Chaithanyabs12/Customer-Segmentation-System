@@ -1,0 +1,471 @@
+/* =========================
+   GENERAL BODY
+========================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    /* Softer professional gradient */
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+}
+
+/* subtle floating shapes */
+body::before {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: rgba(100, 149, 237, 0.1);
+    border-radius: 50%;
+    top: -60px;
+    left: -60px;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background: rgba(123, 104, 238, 0.1);
+    border-radius: 50%;
+    bottom: -60px;
+    right: -60px;
+    z-index: -1;
+}
+
+/* =========================
+   CONTAINER / CARD
+========================= */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+input {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4facfe;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button, .btn {
+    padding: 10px 20px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 20px;
+
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    color: white;
+
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+}
+
+/* delete */
+.delete-btn {
+    background: #ff4b5c;
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* clear */
+.clear-btn {
+    background: #ff6b6b;
+}
+
+/* =========================
+   TABLE STYLING
+========================= */
+table {
+    width: 100%;
+    margin-top: 20px;
+
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    width: 320px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    animation: fadeIn 0.6s ease;
+}
+
+.sub-text {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* INPUT WITH ICON */
+.input-group {
+    display: flex;
+    align-items: center;
+
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.input-group span {
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+
+/* login button */
+.login-card button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   DASHBOARD FIX (CENTERED)
+========================= */
+
+.dashboard-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* soft clean background */
+    background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+}
+
+/* Card Layout */
+.dashboard-card {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 16px;
+    text-align: center;
+
+    width: 420px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    animation: fadeIn 0.8s ease;
+}
+
+.dashboard-card h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Buttons Layout */
+.dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Button Colors */
+.primary {
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+}
+
+.success {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.logout-btn {
+    background: #ff5e5e;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Hover Effects */
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   DASHBOARD (SAFE UPDATE)
+   DOES NOT AFFECT OLD UI
+========================= */
+
+.dash-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* soft background */
+    background: linear-gradient(135deg, #eef2f7, #d6e4ff);
+}
+
+/* card */
+.dash-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+
+    width: 420px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    animation: dashFade 0.6s ease;
+}
+
+.dash-card h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* buttons layout */
+.dash-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* buttons */
+.dash-btn {
+    padding: 12px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* colors */
+.dash-blue {
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+}
+
+.dash-green {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.dash-red {
+    background: #ff5e5e;
+}
+
+/* hover */
+.dash-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* animation */
+@keyframes dashFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===== FORCE DASHBOARD FIX ===== */
+
+.dash-body {
+    margin: 0 !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #e3f2fd, #e8f5e9) !important;
+}
+
+/* center container */
+.dash-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* main card */
+.dash-box {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+
+    width: 400px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+
+    animation: fadeIn 0.7s ease;
+}
+
+/* title */
+.dash-box h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* button group */
+.dash-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* buttons */
+.dash-btn1,
+.dash-btn2,
+.dash-btn3 {
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* colors */
+.dash-btn1 {
+    background: #2196f3;
+}
+
+.dash-btn2 {
+    background: #4caf50;
+}
+
+.dash-btn3 {
+    background: #f44336;
+}
+
+/* hover */
+.dash-btn1:hover,
+.dash-btn2:hover,
+.dash-btn3:hover {
+    transform: scale(1.05);
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
